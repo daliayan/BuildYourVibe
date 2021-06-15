@@ -216,7 +216,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   omniauth
-  puma (~> 4.1)
+  puma (~> 4.3.8)
   rails (~> 6.0.3, >= 6.0.3.4)
   sass-rails (>= 6)
   selenium-webdriver
