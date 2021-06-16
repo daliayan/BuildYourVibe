@@ -1,0 +1,46 @@
+BuildYourVibe - An application where users can make their own house, filled with rooms that fit their vibes
+
+User
+has_many houses
+has_many rooms, through houses
+
+t.string :username
+t.string :password_digest
+
+--
+
+House
+belongs_to user
+has_many rooms
+
+t.string :name
+t.integer :user_id
+t.integer :hex
+t.integer :number_of_rooms
+t.float :price
+t.integer :size
+
+
+--
+
+Room
+belongs_to house
+belongs_to user through houses
+
+t.string :name
+t.string :room_description
+t.integer :windows
+t.integer :hex
+t.integer :room_size
+t.integer :house_id
+
+
+--
+
+Comment
+belongs_to user
+belongs_to house
+
+t.string :user_comment
+t.reference :user, foreign_key: true
+t.reference :house, foreign_key: true
