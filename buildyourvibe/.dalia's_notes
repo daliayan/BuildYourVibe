@@ -1,3 +1,20 @@
+<% if logged_in? %>   
+        ¸,ø¤º°`°º¤ø, <a href="/dreams" style="font-size:14pt; color:#00004d;">All Manifestations</a> ↹
+          <a href="/dreams/new" style="font-size:14pt; color:#00004d;">Create a new Manifestation</a> ↹
+          <a href="/logout" style="font-size:14pt; color:#00004d;">Logout</a> °º¤ø,¸¸,ø¤º° 
+      <% else %>
+            <p></p>
+            <p></p>
+            <p></p>
+          °º¤ø,¸¸,ø¤º° <a href="/signup" style="font-size:14pt; color:#00004d;">Create Account</a> ↹
+          <a href="/login" style="font-size:14pt; color:#00004d;" >Returning User Login</a> ¸¸,ø¤º°`°º¤ø,
+      <% end %>
+
+^^ grabbed my code from my manifest this project to add to my layout
+
+
+<%= link_to 'Welcome', '/' %>
+
 BuildYourVibe - An application where users can make their own house, filled with rooms that fit their vibes
 
 User
