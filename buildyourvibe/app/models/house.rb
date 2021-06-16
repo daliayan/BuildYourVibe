@@ -5,6 +5,6 @@ class House < ApplicationRecord
 
     validates :hex, :price, :size, presence: true
     validates :name, presence: true, uniqueness: true
-    valdiates :price, presence: true, numericality: {greater_than: 0, less_than: 100,000,000}
+    valdiates :price, presence: true, numericality: {greater_than: 0, less_than: 999,999,999}
 
 end

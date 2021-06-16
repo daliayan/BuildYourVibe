@@ -20,8 +20,8 @@
 
 body {
     min-width: 320px;
-    background-color: #fff;
-    color: #777;
+    background-color: rgb(196, 214, 90);
+    color: rgb(54, 168, 163);
     line-height: 1.6;
 }
 
@@ -37,6 +37,6 @@ h4 {
 }
 
 a {
-    color: #3b8bba; /* block-background-text-normal */
+    color: #b2ddf6; /* block-background-text-normal */
     text-decoration: none;
 }
