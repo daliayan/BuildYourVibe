@@ -1,0 +1,24 @@
+<%= form_for(@house) do |f| %>
+
+     <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+
+     <div class="form-group">
+        <%= f.label :hex %>
+        <%= f.color :hex %>
+    </div>
+
+     <div class="form-group">
+        <%= f.label :price %>
+        <%= f.float :price %>
+    </div>
+
+     <div class="form-group">
+        <%= f.label :size %>
+        <%= f.integer :size %>
+    </div>
+
+    <%= f.submit %>
+<% end %>
