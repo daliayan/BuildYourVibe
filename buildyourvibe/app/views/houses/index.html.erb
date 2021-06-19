@@ -1,0 +1,8 @@
+<h1>All the Houses</h1>
+
+<% @houses.each do |house| %>
+    <%= house.name %>
+    <%= house.hex %>
+    <%= house.price %>
+    <%= house.size %>
+<% end %>
