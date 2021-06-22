@@ -1,19 +1,25 @@
 class HousesController < ApplicationController
+    before_action :not_logged_in
 
-    def index
+    def index 
         @houses = House.all
     end
 
     def show
-        @house = House.find(params[:id])
+        @house = House.find_by(params[:id])
+        redirect_to houses_path if !@house
     end
 
     def new
-        @house = House.new
+        if params[:user_id] && @user = User.find_by_id(params[:user_id])
+        @house = @user.houses.build
+        else
+            @house = House.new
+        end
     end
 
     def create
-        @house = House.new(house_params)
+        @house = current_user.houses.build(house_params)
         if @house.save
             redirect_to house_path(@house)
         else
