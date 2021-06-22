@@ -18,5 +18,4 @@ Rails.application.routes.draw do
     end
     resources :comments
 
-    # resources :houses, only: [:new, :index, :show]
 end
