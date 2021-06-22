@@ -5,5 +5,5 @@ class User < ApplicationRecord
     has_many :comments
     has_many :rooms, through: :houses
 
-    validates :username, presence: true
+    validates :username, presence: true, uniqueness: true
 end
