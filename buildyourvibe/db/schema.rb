@@ -31,10 +31,9 @@ ActiveRecord::Schema.define(version: 4) do
     t.string "name"
     t.text "room_description"
     t.integer "windows"
+    t.integer "house_id"
     t.integer "hex"
     t.integer "user_id"
-    t.integer "house_id"
-    t.index ["house_id"], name: "index_rooms_on_house_id"
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
@@ -45,6 +44,5 @@ ActiveRecord::Schema.define(version: 4) do
 
   add_foreign_key "comments", "houses"
   add_foreign_key "comments", "users"
-  add_foreign_key "rooms", "houses"
   add_foreign_key "rooms", "users"
 end

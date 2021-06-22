@@ -7,19 +7,14 @@ class HousesController < ApplicationController
 
     def show
         @house = House.find_by(params[:id])
-        redirect_to houses_path if !@house
     end
 
     def new
-        if params[:user_id] && @user = User.find_by_id(params[:user_id])
-        @house = @user.houses.build
-        else
-            @house = House.new
-        end
+        @house = House.new
     end
 
     def create
-        @house = current_user.houses.build(house_params)
+        @house = House.new(house_params)
         if @house.save
             redirect_to house_path(@house)
         else

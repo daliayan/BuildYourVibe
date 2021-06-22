@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get '/logout' => 'sessions#destroy'
 
     resources :users do
-        resources :houses #shallow: true routing to avoid deep nesting
+        resources :houses, only: [:new, :index, :create] #shallow: true routing to avoid deep nesting
     end
 
     resources :rooms do
